@@ -17,3 +17,10 @@ function getHumanChoice(){
     }
     return userInput;
 }
+
+//Declare the players score and variables.
+    //Create two new variable named humanScore and computerScore in the global scope.
+    //Initialize those variables with the value of 0.
+let humanScore = 0;
+let computerScore = 0;
+
