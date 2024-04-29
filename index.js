@@ -24,3 +24,33 @@ function getHumanChoice(){
 let humanScore = 0;
 let computerScore = 0;
 
+//Write the logic to play a single round.
+    //Create a new function named playRound.
+        //Define two parameters for playRound: humanChoice and computerChoice.
+            //Use these two parameters to take the human and computer choices as arguments.
+        //Make your function's humanChoice parameter case-insensitve.
+        //Write the code for your playRound function to console.log a string value representing the round winner, such as: "You lose! Paper beats Rock".
+        //Increment the humanScore or computerScore variable based on the round winner.
+function playRound(humanChoice, computerChoice){
+    humanChoice = humanChoice.toLowerCase();
+    computerChoice = computerChoice.toLowerCase();
+
+    if (humanChoice === computerChoice.toLowerCase()){
+        console.log("It's a tie!");
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        console.log("You win! " + humanChoice + " beats " + computerChoice);
+        humanScore++;
+    } else {
+        console.log("You lose! " + computerChoice + " beats " + humanChoice);
+        computerScore++;
+    }
+}
+
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+
+playRound(humanChoice, computerChoice);
