@@ -1,3 +1,13 @@
+//Set up event listeners
+const buttons = document.querySelectorAll("button");
+const resultDiv = document.getElementById("result");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        playRound(button.id);
+    })
+})
+
 //Write the logic to get the comuter choice.
     //Create a new function named getComputerChoice.
     //Write the code so that getComputerChoice will randomly return one of the following string values: "rock", "paper", or "scissors".
@@ -21,7 +31,7 @@ function getHumanChoice(){
     //Create a new function named playGame.
     //Move your playRound function and score variables so that they're declared inside of the new playGame function.
     //play 5 rounds by calling playRound 5 times.
-function playGame(){
+
     //Declare the players score and variables.
         //Create two new variable named humanScore and computerScore in the global scope.
         //Initialize those variables with the value of 0.
@@ -53,15 +63,4 @@ function playGame(){
             computerScore++;
         }
     }
-    for (let i = 0; i < 5; i++){
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-        playRound(humanChoice, computerChoice);
-    }
 
-    console.log("Final Scores:");
-    console.log("Human " + humanScore);
-    console.log("Computer " + computerScore);
-}
-
-playGame();
