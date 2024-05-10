@@ -39,7 +39,7 @@ function playGame(){
         humanChoice = humanChoice.toLowerCase();
         computerChoice = computerChoice.toLowerCase();
 
-        if (humanChoice === computerChoice.toLowerCase()){
+        if (humanChoice === computerChoice){
             console.log("It's a tie!");
         } else if (
             (humanChoice === "rock" && computerChoice === "scissors") ||
